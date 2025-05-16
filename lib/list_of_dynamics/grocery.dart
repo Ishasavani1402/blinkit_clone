@@ -22,4 +22,26 @@ class Grocery {
       },
     ];
   }
+
+  static List<dynamic> grocery_iteams_2() {
+    return [
+      {
+        'img': "assets/groceryimages/img6.png",
+        'name': "Dry Fruits and \n  Cereals",
+      },
+      {
+        'img': "assets/groceryimages/img11.png",
+        'name': "Kitchen and \n appliance",
+      },
+      {'img': "assets/groceryimages/img8.png", 'name': "tea and \n coffie"},
+      {
+        'img': "assets/groceryimages/img9.png",
+        'name': "ice cream and \n much more",
+      },
+      {
+        'img': "assets/groceryimages/img10.png",
+        'name': "maggie and \n noodles",
+      },
+    ];
+  }
 }

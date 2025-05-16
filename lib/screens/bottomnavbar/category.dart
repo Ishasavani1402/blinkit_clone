@@ -2,6 +2,7 @@
 
 import 'package:blinkit_clone/list_of_dynamics/grocery.dart';
 import 'package:blinkit_clone/widgets/appbar.dart';
+import 'package:blinkit_clone/widgets/category_page_design.dart';
 import 'package:blinkit_clone/widgets/custome_text.dart';
 import 'package:flutter/material.dart';
 
@@ -16,57 +17,46 @@ class _CategoryState extends State<Category> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: Custome_Appbar(),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(10.5),
-            child: CustomeText(
-              text: "Grocery and kitchen",
-              fsize: 18,
-              fcolor: Colors.black,
-              family: "bold",
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10.5),
+              child: CustomeText(
+                text: "Grocery and kitchen",
+                fsize: 18,
+                fcolor: Colors.black,
+                family: "bold",
+              ),
             ),
-          ),
-          SizedBox(
-            height: 200,
-            child: ListView.builder(
-              itemCount: grocary.length,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) {
-                return Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(5),
-                      child: Container(
-                        height: 70,
-                        width: 70,
-                        decoration: BoxDecoration(
-                          color: Colors.blue.shade100,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Center(
-                          child: Image.asset(
-                            grocary[index]['img'].toString(),
-                          ),
-                        ),
-                      ),
-                    ),
-                    CustomeText(
-                      text: grocary[index]['name'].toString(),
-                      fsize: 12,
-                      fcolor: Colors.black,
-                      family: "regular",
-                    ),
-                  ],
-                );
-              },
+            SizedBox(height: 130, child: CategoryPageDesign.grocary_iteam_1()),
+            SizedBox(height: 130, child: CategoryPageDesign.grocary_iteam_2()),
+            Padding(
+              padding: const EdgeInsets.only(left: 10, top: 3, bottom: 10),
+              child: CustomeText(
+                text: "Snackes and Drinks",
+                fsize: 18,
+                fcolor: Colors.black,
+                family: "bold",
+              ),
             ),
-          ),
-        ],
+            SizedBox(height: 130, child: CategoryPageDesign.snack_drink()),
+            Padding(
+              padding: const EdgeInsets.only(left: 10, top: 3, bottom: 10),
+              child: CustomeText(
+                text: "Household Essentials",
+                fsize: 18,
+                fcolor: Colors.black,
+                family: "bold",
+              ),
+            ),
+
+            SizedBox(height: 130, child: CategoryPageDesign.house_essential()),
+          ],
+        ),
       ),
     );
   }
 }
-
-
