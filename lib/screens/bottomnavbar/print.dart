@@ -14,7 +14,8 @@ class _PrintState extends State<Print> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: Custome_Appbar(backgroundcolor: Colors.amberAccent,),
+      appBar: Custome_Appbar(backgroundcolor: Colors.amberAccent,
+      textcolor: Colors.black,),
       body: Container(
         height: double.infinity,
         width: double.infinity,

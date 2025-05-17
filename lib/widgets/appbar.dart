@@ -6,8 +6,10 @@ import 'package:flutter/material.dart';
 
 class Custome_Appbar extends StatelessWidget implements PreferredSizeWidget {
   Color backgroundcolor;
+  Color textcolor;
 
-  Custome_Appbar({required this.backgroundcolor});
+  Custome_Appbar({required this.backgroundcolor,
+  required this.textcolor});
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -20,13 +22,13 @@ class Custome_Appbar extends StatelessWidget implements PreferredSizeWidget {
           CustomeText(
             text: "Blinkit in",
             fsize: 15,
-            fcolor: Colors.black,
+            fcolor: textcolor,
             family: "bold",
           ),
           CustomeText(
             text: "16 minutes",
             fsize: 20,
-            fcolor: Colors.black,
+            fcolor: textcolor,
             family: "extrabold",
           ),
           Row(
@@ -34,13 +36,13 @@ class Custome_Appbar extends StatelessWidget implements PreferredSizeWidget {
               CustomeText(
                 text: "Home -",
                 fsize: 15,
-                fcolor: Colors.black,
+                fcolor: textcolor,
                 family: "extrabold",
               ),
               CustomeText(
                 text: "Isha Savani , Surat(Guj)",
                 fsize: 15,
-                fcolor: Colors.black,
+                fcolor: textcolor,
                 family: "extrabold",
               ),
             ],
