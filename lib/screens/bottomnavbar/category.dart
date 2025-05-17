@@ -16,7 +16,7 @@ class _CategoryState extends State<Category> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: Custome_Appbar(),
+      appBar: Custome_Appbar(backgroundcolor: Colors.amberAccent,),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(

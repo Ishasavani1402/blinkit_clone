@@ -1,15 +1,18 @@
-// ignore_for_file: use_key_in_widget_constructors, library_private_types_in_public_api, camel_case_types
+// ignore_for_file: use_key_in_widget_constructors, library_private_types_in_public_api, camel_case_types, must_be_immutable
 
 import 'package:blinkit_clone/widgets/custome_text.dart';
 import 'package:blinkit_clone/widgets/search.dart';
 import 'package:flutter/material.dart';
 
 class Custome_Appbar extends StatelessWidget implements PreferredSizeWidget {
+  Color backgroundcolor;
+
+  Custome_Appbar({required this.backgroundcolor});
   @override
   Widget build(BuildContext context) {
     return AppBar(
       toolbarHeight: 150,
-      backgroundColor: Colors.amberAccent,
+      backgroundColor: backgroundcolor,
       automaticallyImplyLeading: false,
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
