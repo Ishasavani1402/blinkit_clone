@@ -63,6 +63,7 @@ class Bestseller extends StatelessWidget {
           fsize: 12,
           fcolor: Colors.black,
           family: "regular",
+          textAlign: TextAlign.center,
         ),
         SizedBox(height: 5),
         Row(
